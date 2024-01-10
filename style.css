@@ -1,0 +1,97 @@
+:root {
+  --game-height: 20vh;
+  --game-width: 500px;
+  --dinosaur-width: 20px;
+  --dinosaur-height: 40%;
+  --dinosaur-left: 20px;
+  --cactus-width: 20px;
+  --cactus-height: 25%;
+}
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #202020;
+  overflow: hidden;
+  height: 100vh;
+  display: flex;
+}
+
+#game {
+  margin: auto;
+  height: var(--game-height);
+  width: var(--game-width);
+  box-sizing: border-box;
+  border: 2px solid #a09898;
+  position: relative;
+  overflow: hidden;
+}
+
+#dinosaur {
+  position: absolute;
+  bottom: 0;
+  width: var(--dinosaur-width);
+  height: var(--dinosaur-height);
+  background-color: white;
+}
+
+#score {
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: white;
+  font-size: 20px;
+  padding: 10px;
+}
+
+.obstacle {
+  width: var(--cactus-width);
+  height: var(--cactus-height);
+  background-color: #228b22;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+}
+
+.cactus {
+  width: var(--cactus-width);
+  height: var(--cactus-height);
+  background-color: #228b22;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+}
+
+.cactus-2 {
+  width: calc(var(--cactus-width) * 2);
+}
+
+.cactus-3 {
+  width: calc(var(--cactus-width) * 3);
+}
+
+.bird {
+  width: var(--cactus-width);
+  height: var(--cactus-height);
+  background-color: #149cc5;
+  position: absolute;
+  right: 0;
+  bottom: calc(var(--dinosaur-height) + 10px);
+  z-index: 1;
+}
+
+#restart {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  #restart-text {
+    text-transform: uppercase;
+    padding-top: 3px;
+  }
+}
